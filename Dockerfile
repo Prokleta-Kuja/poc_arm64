@@ -1,5 +1,5 @@
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
-COPY src/app ./
+COPY out ./
 WORKDIR /app
 
 # EXPOSE 50505
