@@ -31,7 +31,7 @@ jobs:
       run: dotnet build --no-restore
     - 
       name: Publish
-      run: dotnet publish poc_arm64.csproj /p:Version=$Version -c Release --no-restore -o app
+      run: dotnet publish poc_arm64.csproj /p:Version=${{ github.event.inputs.version }} -c Release --no-restore -o app
     -
       name: Set up QEMU
       uses: docker/setup-qemu-action@v2
